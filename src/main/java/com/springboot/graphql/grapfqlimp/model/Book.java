@@ -2,27 +2,30 @@ package com.springboot.graphql.grapfqlimp.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Builder;
+import lombok.Data;
 
-@Setter
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-@Table
 @Entity
+@Data
+@Builder
 public class Book {
+
     
     @Id
-    public Long id;
     public String isn;
     public String title;
     public String publisher;
     public String[] authors;
-    public String publishedDate;
+    public String publishedDate;   
+
+    public Book(String isn, String title, String publisher, String[] authors, String publishedDate) {
+        this.isn = isn;
+        this.title = title;
+        this.publisher = publisher;
+        this.authors = authors;
+        this.publishedDate = publishedDate;
+    }
 
 }
+

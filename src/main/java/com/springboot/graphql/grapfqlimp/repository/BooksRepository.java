@@ -4,6 +4,8 @@ import com.springboot.graphql.grapfqlimp.model.Book;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BooksRepository extends JpaRepository<Book, Long>{
+public interface BooksRepository extends JpaRepository<Book, String>{
+
+    Book findOne(String isn);
     
 }

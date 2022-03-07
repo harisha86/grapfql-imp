@@ -4,12 +4,12 @@ schema {
 
 type Query {
     allBooks: [Books]
-    book(id: String) :Books
+    book(id: String) :Book
 }
 
 
 
-type Books {
+type Book {
     isn: String
     titles: String
     publishers: String

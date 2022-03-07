@@ -14,7 +14,7 @@
 	<name>grapfql-imp</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>15</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -38,13 +38,13 @@
 		</dependency>
 		<dependency>
 			<groupId>com.graphql-java</groupId>
-			<artifactId>graphiql-spring-boot-starter</artifactId>
-			<version>3.6.0</version>
+			<artifactId>graphiql-spring-boot-starter</artifactId>	
+			<version>3.0.3</version>		
 		</dependency>
 		<dependency>
 			<groupId>com.graphql-java</groupId>
 			<artifactId>graphql-java-tools</artifactId>
-			<version>3.2.0</version>
+			<version>5.2.4</version>	
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
