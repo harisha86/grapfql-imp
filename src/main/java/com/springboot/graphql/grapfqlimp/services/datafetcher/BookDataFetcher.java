@@ -19,7 +19,7 @@ public class BookDataFetcher implements DataFetcher<Book>{
     public Book get(DataFetchingEnvironment environment) {
         // Find one
         String isn = environment.getArgument("idfromgraphql");
-        return booksrepository.findOne(isn);
+        return booksrepository.findById(isn).get();
     }
     
 }

@@ -1,5 +1,8 @@
 package com.springboot.graphql.grapfqlimp.controller;
 
+
+import graphql.ExecutionResult;
+
 import com.springboot.graphql.grapfqlimp.services.GraphQLService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,20 +13,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import graphql.ExecutionResult;
+
 
 @RequestMapping("/rest/books")
 @RestController
-public class BooksController {
+public class GrapfqlImpController {
 
     @Autowired
-    GraphQLService graphqlService;
+    GraphQLService graphQLService;
 
-    
-    @PostMapping("/getallbooks")
+    @PostMapping
     public ResponseEntity<Object> getAllBooks(@RequestBody String query) {
-        ExecutionResult executeResult = graphqlService.getGraphQL().execute(query);
-        return new ResponseEntity<>(executeResult, HttpStatus.OK);
+        ExecutionResult execute = graphQLService.getGraphQL().execute(query);
+
+        return new ResponseEntity<>(execute, HttpStatus.OK);
     }
 
 }

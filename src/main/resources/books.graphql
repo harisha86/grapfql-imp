@@ -3,8 +3,8 @@ schema {
 }
 
 type Query {
-    allBooks: [Books]
-    book(id: String) :Book
+    allBooks: [Book]
+    book(idfromgraphql: String) :Book
 }
 
 
