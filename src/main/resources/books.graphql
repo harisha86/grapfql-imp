@@ -1,0 +1,19 @@
+schema {
+    query : Query
+}
+
+type Query {
+    allBooks: [Books]
+    book(id: String) :Books
+}
+
+
+
+type Books {
+    isn: String
+    titles: String
+    publishers: String
+    publishedDate: String
+    authors: [String]  
+
+}
