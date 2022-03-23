@@ -68,8 +68,28 @@ public class GraphQLService {
                 new Book("125", "Java 9 Programming", "Orielly",
                         new String[] {
                                 "Venkat", "Ram"
-                        }, "Dec 2016")
-        ).forEach(book -> {
+                        }, "Dec 2016"),
+                new Book("126", "Java 11 Programming", "Orielly",
+                        new String[] {
+                                "Alfred", "Ria","Rishi", "Damo"
+                        }, "Dec 2016"),
+                new Book("127", "Springboot", "Orielly",
+                        new String[] {
+                                "Rishi", "Damo"
+                        }, "Dec 2017"),
+                new Book("128", "Microservices", "Orielly",
+                        new String[] {
+                                "Singh", "Tishki"
+                        }, "Dec 2018"),
+                new Book("129", "Design Thinking", "Orielly",
+                        new String[] {
+                                "Venkat", "John", "Tom"
+                        }, "Dec 2019"),
+                new Book("130", "Machine Learnong", "Orielly",
+                        new String[] {
+                                "Harisha", "Selvaraj", "Chalam"
+                        }, "Dec 2020")
+).forEach(book -> {
             bookRepository.save(book);
         });
     }
