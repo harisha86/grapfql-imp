@@ -11,8 +11,8 @@ type Query {
 
 type Book {
     isn: String
-    titles: String
-    publishers: String
+    title: String
+    publisher: String
     publishedDate: String
     authors: [String]  
 
